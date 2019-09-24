@@ -45,7 +45,7 @@ The **required input files** are `files_data.txt` and `hap_search_settings.txt`.
 #####	Preface
 Input files and their formats are specified in a file with default (currently required) name `files_data.txt`, which must be in the directory from which HapFerret is run. An example of each data_files for each files format (wide and long) is provided below.
 
-**File Formats:** HapFerret accepts two genotype input formats: `wide` and `long`.   
+**File Formats:** HapFerret accepts two genotype input formats: `wide` and `long`.
 
 ##### I.) Input data and data file: 
 - `genotype data`: can be in long or wide format
@@ -194,16 +194,27 @@ n_bootstrap_reps 0
 **Note**: These key, value pairs do not need to be in this order. Here is more information about each parameters:
 
 > **accept_params** (1 or 0)  Should these parameters be used as input (1), or should the user queried to enter possible changes
+
 > **mode** 1  (keep this setting, ignore this)
+
 > **blocksequence** 0 (keep this setting, ignore this)
+
 > **race** Used if genotype input file is long format, then this specifies which race—identifier in 2nd column of file—to use.  Ignored in wide format.
+
 > **disease_data** (0 or 1)  1 if there is a disease data file; not documentation yet
+
 > **target_delta**  The EM algorithm iterates and sums the frequency difference between iterations for each haplotype, stopping when this difference is less than this parameter
+
 > **max_iterations** Stop the inference at this count of iterations even if target_delta hasn’t been reached
+
 > **full_hap_call**  Infer haplotypes for the complete (ordered) set of loci in the input file
+
 > **subseq_hap_call**  Infer haplotypes for subsequences of the input loci.  hapferret  runs along the set of loci, inferring haplotypes first for all sequences of two (contiguous) loci, then for sequences of 3, 4, etc. loci, to the limit given by max_subblock 
+
 > **max_subblock**  Maximum length of sequences of loci to infer in subseq_hap_call.  
+
 > **calc_hap_call_entropy** Calculated entropy—uncertainty—of the inference
+
 > **n_bootstrap_reps**  Number of bootstrap replications, set to 0 for no bootstrapping—keep this setting for now.
 
 ### Running HapFerret
