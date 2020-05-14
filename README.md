@@ -1,4 +1,5 @@
 # HapFerret
+[![GitHub issues](https://img.shields.io/github/issues/CCBR/HapFerret)](https://github.com/CCBR/HapFerret/issues) [![GitHub license](https://img.shields.io/github/license/CCBR/HapFerret)](https://github.com/CCBR/HapFerret/blob/master/LICENSE)
 
 The Expectation-Maximization (EM) algorithm for haplotype inference has been superseded for accuracy by newer programs, e.g. `PHASE` and `SHAPEIT`, but remains useful for rapid analysis. 
 
