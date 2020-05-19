@@ -1,0 +1,2 @@
+fileformat c
+genotype_file ferret_example_input.txt

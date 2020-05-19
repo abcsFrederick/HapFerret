@@ -1,0 +1,4 @@
+fileformat s
+genotype_file c22mge_ceu.txt
+var_info_file c22mge_ceu.i.txt
+
