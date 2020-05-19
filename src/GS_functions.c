@@ -395,7 +395,7 @@ float bayes_num(float h) // h is hap frequency
         log_int_prod += log(1 - unseen_gt_coef*h)*tot_gtypes;
 		if (isnan(log_int_prod) || isinf(log_int_prod))
 		{
-			printf("unfixable logintprod = %e, ??= nan? exiting\n", log_int_prod);
+			printf("unfixable logintprod = %e, = nan? exiting\n", log_int_prod);
 			exit (0);
 		}
 	}

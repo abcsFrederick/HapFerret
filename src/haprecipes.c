@@ -1012,7 +1012,3 @@ float adjust_binom_p(float calc_ct, float logP, int Nchrom)
 	}
 	return newcount;
 }
-	
-	
-	
-	

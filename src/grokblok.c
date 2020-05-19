@@ -114,7 +114,7 @@ int grokblok(struct locus_set *locusdata)  // get warning locusdata not used; sh
 	int gsb_return; //GrokSubBlock's return value
 	int  batch= (int) NULL;  // using k from function; K, KK, I, LL, ii now used in GrokSubBlock; THUS OBSOLETE? REMOVE?
 	struct allele_namect  *temp_allele_list;
-	struct hap_diagnostics *vet_result;
+	struct hap_diagnostics *vet_result = (struct hap_diagnostics *)0;
 	struct output_params  *outparams;
 	struct all_hap_inferences all_inferences;
 	struct all_hap_inferences *all_inf_ptr = &all_inferences;

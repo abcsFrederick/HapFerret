@@ -226,7 +226,7 @@ int hapoutputs(int  (**gtype_array)[2], struct output_params *outparams, struct 
 				fprintf(argblockdata, "%s -- ", locus[KK]);
 			}
 			fprintf(argblockdata, "%s \n", locus[endloc]);
-			fprintf(argblockdata, "hap block coordinates %d to %d\n", locusposition[startloc], locusposition[endloc]);
+			fprintf(argblockdata, "hap block coordinates %ld to %ld\n", locusposition[startloc], locusposition[endloc]);
 			//now get presence/ absence of given hap for each individual's genotype:
 			// BOOTSTRAP_BLOCKOUTPUT and blockoutput from the tree-stored hap data share this case since they use the same formatting; somewhat awkward but simpler
 			if (BOOTSTRAP_BLOCKOUTPUT){ //get the inferred haps stored in boot genotype hapdata
@@ -404,7 +404,7 @@ int hapoutputs(int  (**gtype_array)[2], struct output_params *outparams, struct 
 				strcpy(blockhapname, blockname);
 				strcat(blockhapname, hapname); // these for hap data file
 				fprintf(argblockdata, "haplotype %s is  %s, frequency %.3f\n", hapname, hapgraphic[N], blockhap_freq[N]);
-				fprintf(arghapdata, "%s, %d, %d, %d, %s, %s, %s, %s\n", blockhapname, chromosome, locusposition[startloc], locusposition[endloc],
+				fprintf(arghapdata, "%s, %d, %ld, %ld, %s, %s, %s, %s\n", blockhapname, chromosome, locusposition[startloc], locusposition[endloc],
 							"NA", "HG16", "0", "1");
 				//  TEST FOR MISSING INDIVS PROBLEM
 				//fprintf(haplotype_log, "blockhap %s, indiv_ct = %d", blockhapname, setparams->indiv_ct);

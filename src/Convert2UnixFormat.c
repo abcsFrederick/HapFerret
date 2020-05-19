@@ -26,12 +26,14 @@ convert2Unix (inFile);
 
  */
 #include <stdio.h>
+#include <stdlib.h>
 #include <string.h>
+#include <limits.h>
 #include "Convert2UnixFormat.h"
 
 int	convert2Unix (char* inFile)
 {
-	char *outfile;
+	char outfile[PATH_MAX]; // char *outfile;
 	char script[200];
 	char *replaceCommand = "\'\\r\' \'\\n\' ";
 	

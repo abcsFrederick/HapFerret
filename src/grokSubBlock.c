@@ -21,7 +21,7 @@ int boundaryCheck(int batch, int k, int kk, float **ran_hce_matrix) //checks bou
 		return 2; //continue;
 	}
 	if (k == 0 && kk == tot_n_loci  - 1 && full_hap_call) {
-		/*ran_hce_matrix[kk][k] = -99; /* fill with real data for full call-  fix */
+		/*ran_hce_matrix[kk][k] = -99;*/ /* fill with real data for full call-  fix */
 		return 2;//continue; /* that's all loci, already done above*/
 	}
 	
@@ -129,6 +129,8 @@ Written by AS, 3/5/05 */
 		}
 		ordered_gt[gtorder[i]] = i;  /* gtorder[i] gives the ordering of the i'th genotype, So, ordered_gt[i] is the gtype whose order is i */
 	}	
+#if 0
+// rpf
 		/*// test gtype ordering 
 				fprintf(hap_test_log, "test of ordering of gtypes\n");
 				for (i = 0; i < n_gtypes; i++){
@@ -143,6 +145,8 @@ Written by AS, 3/5/05 */
 				fprintf(hap_test_log, "\n");/**/
 				/*return(1);/*TEMP FIXFIX*/
 				/* calc n_subgtypes */	
+// rpf 
+#endif 
 	n_subgtypes = 1; 
 	for (i = 1; i < n_gtypes; i++){ 
 		if (subgt_for_ordered_gt[ordered_gt[i]] != subgt_for_ordered_gt[ordered_gt[i-1]]) ++n_subgtypes;
