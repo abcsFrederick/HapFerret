@@ -1,3 +1,11 @@
+# hapferret (output and logfiles)
+logfiles/
+more_output/
+*matrices.txt
+**matrices.txt
+*output.txt
+**output.txt
+
 # MacOSX
 *.DS_Store
 **.DS_Store
